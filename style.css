@@ -1,0 +1,193 @@
+/* กำหนดค่าเริ่มต้นและฟอนต์ */
+:root {
+    --primary-color: #0d0c2b; /* สีพื้นหลังเข้ม */
+    --secondary-color: #1f1f3e; /* สีเข้มรอง */
+    --card-bg: #ffffff; /* สีพื้นหลังการ์ด */
+    --text-color: #333;
+    --text-color-light: #ffffff;
+    --accent-color: #f0c400; /* สีเหลืองเด่นๆ */
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Sarabun', 'Arial', sans-serif; /* ใชฟอนต์ Sarabun หรือฟอนต์ที่อ่านง่าย */
+    background-color: #f4f7f6;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ===== 1. ส่วน Header (Hero Section) ===== */
+.hero-section {
+    /* พื้นหลังไล่สี + รูปดาว (เราใช้แค่ไล่สีก่อน) */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 60px 20px 80px; /* เพิ่ม padding ด้านล่างให้โค้ง */
+    
+    /* ทำให้ขอบด้านล่างโค้งมนเหมือนในตัวอย่าง */
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    position: relative;
+    overflow: hidden; /* สำหรับเอฟเฟกต์ดาวในอนาคต */
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* ทำให้รูปเป็นวงกลม */
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(240, 196, 0, 0.5);
+    object-fit: cover; /* กันรูปบิดเบี้ยว */
+    margin-bottom: 20px;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.hero-section .subtitle {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(240, 196, 0, 0.4);
+}
+
+.tags {
+    margin-top: 20px;
+}
+
+.tag {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--text-color-light);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 5px;
+    display: inline-block;
+}
+
+/* ===== 2. ส่วน Navigation Bar ===== */
+.main-nav {
+    background-color: var(--card-bg);
+    padding: 10px 0;
+    box-shadow: var(--shadow);
+    
+    /* ทำให้ Nav "ลอย" ขึ้นมาอยู่กึ่งกลาง */
+    width: 80%;
+    max-width: 900px;
+    margin: -50px auto 0 auto; /* Trick: margin-top ติดลบเพื่อดึง Nav ขึ้นมา */
+    border-radius: 50px;
+    position: relative; /* ให้อยู่เหนือ content */
+    z-index: 10;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* ให้ขึ้นบรรทัดใหม่ได้บนจอมือถือ */
+    padding: 10px;
+}
+
+.main-nav li {
+    margin: 5px 15px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--accent-color);
+}
+
+/* ===== 3. ส่วนเนื้อหาหลัก ===== */
+.content-wrapper {
+    max-width: 900px;
+    margin: 40px auto; /* เว้นระยะห่างจาก Nav Bar */
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 คอลัมน์ */
+    gap: 25px; /* ระยะห่างระหว่างการ์ด */
+}
+
+/* ทำให้การ์ดแรก (About) กว้างเต็ม */
+#about {
+    grid-column: 1 / -1; /* กว้างเต็ม 2 คอลัมน์ */
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.card h2 i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+/* สไตล์สำหรับ Contact List */
+#contact ul {
+    list-style: none;
+}
+#contact li {
+    margin-bottom: 10px;
+}
+#contact a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+#contact a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+
+/* ===== 4. ส่วน Footer ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e0e0e0;
+    color: #777;
+    margin-top: 30px;
+}
