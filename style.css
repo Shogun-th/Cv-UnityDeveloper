@@ -6,6 +6,7 @@
     --text-color: #333;
     --text-color-light: #ffffff;
     --accent-color: #f0c400; /* สีเหลืองเด่นๆ */
+    --icon-color: #3a7bd5; /* สีน้ำเงินสำหรับไอคอน */
     --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -141,28 +142,44 @@ body {
 }
 
 /* ทำให้การ์ดแรก (About) กว้างเต็ม */
-#about {
-    grid-column: 1 / -1; /* กว้างเต็ม 2 คอลัมน์ */
-}
+/* #about {
+    grid-column: 1 / -1; 
+} */
+/* เราจะใช้ .full-width แทน #about แล้ว */
+
 
 .card {
     background-color: var(--card-bg);
     border-radius: 15px;
     padding: 30px;
+    padding-left: 45px; /* เพิ่ม padding ซ้าย_เพื่อเว้นที่ให้เส้น */
     box-shadow: var(--shadow);
+    position: relative; /* เพิ่ม position */
+}
+
+/* สร้างเส้นสีเหลืองด้านซ้าย */
+.card::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    bottom: 25px;
+    width: 4px;
+    background-color: var(--accent-color); /* สีเหลือง */
+    border-radius: 2px;
 }
 
 .card h2 {
     color: var(--primary-color);
     margin-bottom: 15px;
-    border-bottom: 2px solid var(--accent-color);
+    /* border-bottom: 2px solid var(--accent-color); <<< ลบ/คอมเมนต์บรรทัดนี้ */
     display: inline-block;
     padding-bottom: 5px;
 }
 
 .card h2 i {
     margin-right: 10px;
-    color: var(--accent-color);
+    color: var(--icon-color); /* เปลี่ยนเป็น var(--icon-color) */
 }
 
 /* สไตล์สำหรับ Contact List */
@@ -170,8 +187,25 @@ body {
     list-style: none;
 }
 #contact li {
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* เพิ่มระยะห่าง */
+    font-size: 1rem;
+    display: flex; /* จัดเรียงไอคอนกับข้อความ */
+    align-items: center;
 }
+
+/* จัดสไตล์ไอคอนและข้อความใน Contact */
+#contact li strong {
+    display: inline-block;
+    min-width: 90px; /* จัดให้ข้อความ (Phone:, Email:) ตรงกัน */
+}
+
+#contact li i {
+    margin-right: 10px;
+    color: var(--icon-color); /* สีน้ำเงิน */
+    width: 20px;
+    text-align: center;
+}
+
 #contact a {
     text-decoration: none;
     color: var(--primary-color);
@@ -182,6 +216,11 @@ body {
     text-decoration: underline;
 }
 
+/* สำหรับการ์ดที่ต้องการให้กว้างเต็ม */
+.full-width {
+    grid-column: 1 / -1;
+}
+
 
 /* ===== 4. ส่วน Footer ===== */
 footer {
@@ -190,4 +229,253 @@ footer {
     background-color: #e0e0e0;
     color: #777;
     margin-top: 30px;
+}
+
+
+/* ========== About Me Tags ========== */
+.about-tags {
+    margin-top: 20px;
+}
+.about-tag {
+    background-color: #fef3c7; /* สีพื้นหลังแท็ก (เหลืองอ่อน) */
+    color: #a16207; /* สีข้อความแท็ก (เหลืองเข้ม/น้ำตาล) */
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 5px 5px 5px 0;
+    display: inline-block;
+    font-weight: 500;
+}
+
+
+/* ========== Education Timeline ========== */
+
+/* การ์ด Timeline จะไม่ใช้เส้นเหลืองด้านซ้ายแบบ .card ปกติ */
+.timeline-card::before {
+    display: none;
+}
+
+/* Reset padding ที่เราตั้งไว้ใน .card */
+.timeline-card {
+    padding-left: 30px; 
+}
+
+.timeline-container {
+    position: relative;
+    padding-left: 40px; /* เว้นที่ให้เส้น Timeline */
+    margin-top: 20px;
+}
+
+/* นี่คือเส้น Timeline แนวตั้งสีเหลือง */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+    width: 4px;
+    background-color: var(--accent-color); /* สีเหลือง */
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+/* จุดวงกลมบนเส้น Timeline */
+.timeline-dot {
+    position: absolute;
+    left: -48px; /* จัดให้อยู่กึ่งกลางเส้น (40px padding + 4px bar width) */
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--accent-color); /* สีเหลือง */
+    border-radius: 50%;
+    border: 3px solid var(--card-bg); /* ให้มีขอบสีขาวเหมือนพื้นหลัง */
+}
+
+/* กล่องเนื้อหาของแต่ละรายการ */
+.timeline-content {
+    background-color: #f9f9f9; /* สีพื้นหลังกล่อง (เทาอ่อน) */
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.timeline-content h3 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.timeline-date {
+    font-style: italic;
+    color: #777;
+    font-size: 0.9rem;
+}
+/* ========== Experience Timeline Bullets ========== */
+/* (ใช้สำหรับจัดสไตล์ bullet points ในส่วน Experience) */
+
+.timeline-bullets {
+    list-style-type: disc; /* ใช้จุด bullet แบบมาตรฐาน */
+    margin-top: 10px;
+    padding-left: 20px; /* เว้นระยะจากขอบซ้าย */
+    color: #555; /* สีข้อความเหมือน <p> */
+}
+
+.timeline-bullets li {
+    margin-bottom: 5px; /* ระยะห่างระหว่างข้อ */
+}
+/* ========== Experience Timeline Bullets ========== */
+.timeline-bullets {
+    list-style-type: disc; 
+    margin-top: 10px;
+    padding-left: 20px; 
+    color: #555;
+}
+
+.timeline-bullets li {
+    margin-bottom: 5px;
+}
+
+/* ========== Skills Section ========== */
+.skills-section {
+    padding-left: 30px;
+}
+
+.skills-section::before {
+    display: none; /* ไม่ต้องใช้เส้นสีเหลืองด้านซ้าย */
+}
+
+.skills-grid {
+    display: grid;
+    /* สร้าง grid ที่ปรับจำนวน column อัตโนมัติ */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px; /* ระยะห่างระหว่าง card */
+    margin-top: 20px;
+}
+
+.skill-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex; /* จัดเรียง icon กับ text */
+    align-items: flex-start; /* จัดให้อยู่บนสุด */
+    gap: 15px; /* ระยะห่างระหว่าง icon กับ text */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 40px; /* สำหรับ Font Awesome */
+    color: var(--primary-color);
+}
+
+.skill-title {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: var(--accent-color); /* สีเหลืองเป็นสี default */
+}
+
+.skill-title.c-sharp-color {
+    color: #68217A; /* สีม่วงสำหรับ C# */
+}
+
+.skill-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+/* ========== Portfolio Projects Section ========== */
+
+.projects-grid {
+    display: grid;
+    /* สร้าง Grid 3 คอลัมน์บนจอใหญ่ 
+      และปรับเป็น 1-2 คอลัมน์อัตโนมัติบนจอเล็ก 
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px; /* ระยะห่างระหว่างการ์ด */
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: var(--card-bg); /* #ffffff */
+    border-radius: 15px; /* ขอบโค้งมน */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden; /* ทำให้รูปภาพไม่ล้นขอบ */
+    display: flex;
+    flex-direction: column; /* จัดเรียงแนวตั้ง (รูป > เนื้อหา) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* เอฟเฟกต์ลอยขึ้น */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px; /* กำหนดความสูงรูปให้เท่ากัน */
+    object-fit: cover; /* Crop รูปให้เต็มพื้นที่ */
+    border-bottom: 2px solid #f0f0f0; /* เส้นคั่นบางๆ */
+}
+
+.project-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* ทำให้การ์ดทุกใบสูงเท่ากัน */
+}
+
+.project-info h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.project-info h3 i {
+    margin-right: 10px;
+    color: var(--icon-color); /* สีน้ำเงิน */
+}
+
+.project-genre {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    flex-grow: 1; /* ดันปุ่มไปอยู่ล่างสุด */
+    margin-bottom: 20px;
+}
+
+.github-button {
+    display: block; /* ทำให้ปุ่มกว้างเต็ม */
+    text-align: center;
+    background-color: var(--primary-color); /* สีน้ำเงินเข้ม */
+    color: var(--text-color-light); /* สีขาว */
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.github-button:hover {
+    background-color: #333; /* สีเข้มขึ้นเวลากด */
 }
