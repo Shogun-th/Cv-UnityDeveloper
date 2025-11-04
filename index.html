@@ -13,10 +13,13 @@
         <div class="progress-bar" id="myBar"></div>
     </div>
     <header class="hero-section">
+        <div id="particles-js"></div>
+
         <img src="https://github.com/Shogun-th/Cv-UnityDeveloper/blob/main/1.jpg?raw=true" alt="KASIDIS PHUMJUMPA Profile Picture" class="profile-pic">
         
-        <h1>Hi👋, I'm Shogun</h1>        
-        <a href="https://drive.google.com/file/d/1_J6hKpwRSp93IYKcoUND6fjZ6lim4Xok/view?usp=drive_link" class="cta-button" download>
+        <h1>Hi👋, I'm <span class="hero-name">Shogun</span></h1>        
+        
+        <a href="https://drive.google.com/file/d/1ExLR76FF7Q1JF-t1lCTj4UfOhTNJfN1l/view?usp=sharing" class="cta-button" download>
             <i class="fa-solid fa-download"></i> Download CV
         </a>
 
@@ -117,7 +120,7 @@
                         <span class="timeline-date">January 2025 - Present</span>
                         <ul class="timeline-bullets">
                             <li>Developed an Android/ios game using Unity and C#</li>
-                            <li>Designed Idle RPG for players aged 4-9</li>
+                            <li>Designed Idle RPG for players aged 18-35</li>
                             <li>Manage Schedule Plan and Develop the system ON Cloud (Firebase) </li>
                         </ul>
                     </div>
@@ -220,5 +223,27 @@
     </footer>
 
     <script src="script.js"></script>
-</body>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": false },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
+                "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                "modes": { "repulse": { "distance": 100, "duration": 0.4 }, "push": { "particles_nb": 4 } }
+            },
+            "retina_detect": true
+        });
+    </script>
+    </body>
 </html>

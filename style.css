@@ -1,12 +1,15 @@
-/* กำหนดค่าเริ่มต้นและฟอนต์ */
+/* ===== (ใหม่) Import Font ธีม Racing ===== */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&display=swap');
+
+/* (ใหม่) กำหนดค่าเริ่มต้นและฟอนต์ธีม Williams */
 :root {
-    --primary-color: #0d0c2b; /* สีพื้นหลังเข้ม */
-    --secondary-color: #1f1f3e; /* สีเข้มรอง */
-    --card-bg: #ffffff; /* สีพื้นหลังการ์ด */
+    --primary-color: #041E42; /* (ใหม่) Williams Dark Navy */
+    --secondary-color: #0d2c54; /* (ใหม่) สีเข้มรอง */
+    --card-bg: #ffffff; 
     --text-color: #333;
     --text-color-light: #ffffff;
-    --accent-color: #f0c400; /* สีเหลืองเด่นๆ */
-    --icon-color: #3a7bd5; /* สีน้ำเงินสำหรับไอคอน */
+    --accent-color: #00A0DE; /* (ใหม่) Williams Electric Blue */
+    --icon-color: #00A0DE; /* (ใหม่) ใช้สี Electric Blue */
     --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -17,7 +20,8 @@
 }
 
 body {
-    font-family: 'Sarabun', 'Arial', sans-serif; /* ใชฟอนต์ Sarabun หรือฟอนต์ที่อ่านง่าย */
+    /* (ใหม่) เปลี่ยนฟอนต์ */
+    font-family: 'Exo 2', 'Sarabun', 'Arial', sans-serif; 
     background-color: #f4f7f6;
     color: var(--text-color);
     line-height: 1.6;
@@ -25,7 +29,8 @@ body {
 
 /* ===== 1. ส่วน Header (Hero Section) ===== */
 .hero-section {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    /* (ใหม่) ไล่สีธีม Williams */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); 
     color: var(--text-color-light);
     text-align: center;
     padding: 60px 20px 80px; 
@@ -39,8 +44,8 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%; 
-    border: 5px solid var(--accent-color);
-    box-shadow: 0 0 20px rgba(240, 196, 0, 0.5);
+    border: 5px solid var(--accent-color); /* (ใหม่) ขอบสีฟ้า */
+    box-shadow: 0 0 20px rgba(0, 160, 222, 0.5); /* (ใหม่) เงาสีฟ้า */
     object-fit: cover; 
     margin-bottom: 20px;
 }
@@ -52,14 +57,14 @@ body {
 
 .hero-section .subtitle {
     font-size: 1.5rem;
-    color: var(--accent-color);
+    color: var(--accent-color); /* (ใหม่) สีฟ้า */
     margin-bottom: 20px;
     font-weight: bold;
 }
 
 .cta-button {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
+    background-color: var(--accent-color); /* (ใหม่) สีฟ้า */
+    color: var(--primary-color); /* (ใหม่) ตัวอักษรสีเข้ม */
     padding: 12px 25px;
     border-radius: 50px;
     text-decoration: none;
@@ -72,7 +77,7 @@ body {
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(240, 196, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 160, 222, 0.4); /* (ใหม่) เงาสีฟ้า */
 }
 
 .tags {
@@ -123,7 +128,7 @@ body {
 }
 
 .main-nav a:hover {
-    color: var(--accent-color);
+    color: var(--accent-color); /* (ใหม่) สีฟ้า */
 }
 
 /* ===== 3. ส่วนเนื้อหาหลัก ===== */
@@ -152,7 +157,7 @@ body {
     top: 25px;
     bottom: 25px;
     width: 4px;
-    background-color: var(--accent-color); 
+    background-color: var(--accent-color); /* (ใหม่) สีฟ้า */
     border-radius: 2px;
 }
 
@@ -165,7 +170,7 @@ body {
 
 .card h2 i {
     margin-right: 10px;
-    color: var(--icon-color); 
+    color: var(--icon-color); /* (ใหม่) สีฟ้า */
 }
 
 /* สไตล์สำหรับ Contact List */
@@ -186,7 +191,7 @@ body {
 
 #contact li i {
     margin-right: 10px;
-    color: var(--icon-color); 
+    color: var(--icon-color); /* (ใหม่) สีฟ้า */
     width: 20px;
     text-align: center;
 }
@@ -197,7 +202,7 @@ body {
     transition: color 0.3s ease;
 }
 #contact a:hover {
-    color: var(--accent-color);
+    color: var(--accent-color); /* (ใหม่) สีฟ้า */
     text-decoration: underline;
 }
 
@@ -222,8 +227,8 @@ footer {
     margin-top: 20px;
 }
 .about-tag {
-    background-color: #fef3c7; 
-    color: #a16207; 
+    background-color: #e6f7ff; /* (ใหม่) สีพื้นหลังแท็ก (ฟ้าอ่อน) */
+    color: #007ab8; /* (ใหม่) สีข้อความแท็ก (ฟ้าเข้ม) */
     padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -235,7 +240,7 @@ footer {
 /* ===== (ใหม่) สไตล์สำหรับ Highlight Text ===== */
 .highlight-text {
     font-weight: bold;
-    color: var(--primary-color); /* ใช้สีน้ำเงินเข้มเน้นข้อความ */
+    color: var(--accent-color); /* (ใหม่) ใช้สีฟ้าเน้นข้อความ */
 }
 
 
@@ -261,7 +266,7 @@ footer {
     top: 5px; 
     bottom: 10px;
     width: 4px;
-    background-color: var(--accent-color); 
+    background-color: var(--accent-color); /* (ใหม่) สีฟ้า */
     border-radius: 2px;
 }
 
@@ -270,14 +275,13 @@ footer {
     margin-bottom: 25px;
 }
 
-/* (แก้ไขแล้ว) จุดวงกลมบนเส้น Timeline */
 .timeline-dot {
     position: absolute;
-    left: -46px; /* แก้ไขจาก -48px */
+    left: -46px; 
     top: 5px;
     width: 16px;
     height: 16px;
-    background-color: var(--accent-color); 
+    background-color: var(--accent-color); /* (ใหม่) สีฟ้า */
     border-radius: 50%;
     border: 3px solid var(--card-bg); 
 }
@@ -305,7 +309,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* (แก้ไขแล้ว) ========== Experience Timeline Bullets ========== */
 .timeline-bullets {
     list-style-type: disc; 
     margin-top: 10px;
@@ -360,7 +363,7 @@ footer {
 .skill-title {
     margin: 0 0 5px 0;
     font-size: 1.1rem;
-    color: var(--accent-color); 
+    color: var(--accent-color); /* (ใหม่) สีฟ้า */
 }
 
 .skill-title.c-sharp-color {
@@ -418,7 +421,7 @@ footer {
 
 .project-info h3 i {
     margin-right: 10px;
-    color: var(--icon-color); 
+    color: var(--icon-color); /* (ใหม่) สีฟ้า */
 }
 
 .project-genre {
@@ -448,7 +451,8 @@ footer {
 }
 
 .github-button:hover {
-    background-color: #333; 
+    background-color: var(--accent-color); /* (ใหม่) Hover เป็นสีฟ้า */
+    color: var(--primary-color);
 }
 /* ===== (ใหม่) Scroll Progress Bar ===== */
 .progress-container {
@@ -464,7 +468,7 @@ footer {
 .progress-bar {
     height: 100%;
     width: 0%; 
-   background: linear-gradient(90deg, #ff8c00, #ff0000);
+    background: var(--accent-color); /* (ใหม่) สีฟ้า */
 }
 /* ===== (ใหม่) ปุ่ม Scroll to Top ===== */
 #scrollTopBtn {
@@ -488,6 +492,32 @@ footer {
 }
 
 #scrollTopBtn:hover {
-    background-color: #333; 
+    background-color: var(--accent-color); /* (ใหม่) Hover เป็นสีฟ้า */
     transform: translateY(-3px); 
+}
+/* ===== (ใหม่) Particles.js Background ===== */
+#particles-js {
+    position: absolute; /* ทำให้ลอยอยู่หลังเนื้อหา */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* 1. ให้อยู่หลังสุด */
+}
+
+/* (ใหม่) ทำให้เนื้อหา Hero อยู่ทับ Particles */
+.hero-section > * {
+    position: relative;
+    z-index: 2; /* 2. ให้อยู่หน้า z-index: 1 */
+}
+
+/* (ใหม่) ยกเว้น div ของ particles เอง (กันมันทับตัวเอง) */
+.hero-section > #particles-js {
+    z-index: 1;
+}
+
+/* (ใหม่) สไตล์สำหรับชื่อที่ไฮไลท์ใน Hero */
+.hero-name {
+    color: var(--accent-color); /* (สีฟ้า) */
+    font-weight: 700;
 }
