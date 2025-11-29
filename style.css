@@ -521,3 +521,27 @@ footer {
     color: var(--accent-color); /* (สีฟ้า) */
     font-weight: 700;
 }
+.cert-btn {
+    display: inline-block;
+    margin-top: 15px; /* เว้นระยะห่างจาก bullet points */
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 2px solid var(--accent-color); /* ขอบสีฟ้า */
+    color: var(--accent-color); /* ตัวหนังสือสีฟ้า */
+    border-radius: 50px; /* ขอบมน */
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cert-btn:hover {
+    background-color: var(--accent-color); /* เมื่อชี้แล้วพื้นหลังเป็นสีฟ้า */
+    color: var(--primary-color); /* ตัวหนังสือเปลี่ยนเป็นสีเข้ม */
+    transform: translateY(-2px); /* ลอยขึ้นนิดหน่อย */
+    box-shadow: 0 4px 10px rgba(0, 160, 222, 0.3); /* เงาสีฟ้าจางๆ */
+}
+
+.cert-btn i {
+    margin-right: 5px;
+}
