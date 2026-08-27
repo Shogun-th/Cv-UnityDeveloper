@@ -19,8 +19,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Custom CSS (with cache busting) -->
+    <link rel="stylesheet" href="style.css?v=3.0">
 </head>
 <body>
 
@@ -218,7 +218,8 @@
                 </div>
 
                 <div class="team-grid">
-                    <div class="team-card featured-member">
+                    <!-- Member 1: Kasidis Phumjumpa -->
+                    <div class="team-card">
                         <div class="member-avatar">
                             <img src="1.jpg" alt="Kasidis Phumjumpa (Shogun)" class="avatar-img">
                             <span class="role-badge">Founder</span>
@@ -236,26 +237,53 @@
                                 <span>Tools Dev</span>
                             </div>
                             <div class="member-links">
-                                <a href="mailto:kasidis.p15793@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
                                 <a href="https://www.linkedin.com/in/kasidis-phumjumpa-a4aa9b396/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                                 <a href="https://github.com/Shogun-th" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="team-card collaboration-slot">
-                        <div class="collab-icon"><i class="fa-solid fa-users"></i></div>
+                    <!-- Member 2: Pawaris Iamraka -->
+                    <div class="team-card">
+                        <div class="member-avatar">
+                            <img src="pawaris.png" alt="Pawaris Iamraka" class="avatar-img">
+                            <span class="role-badge">Core Team</span>
+                        </div>
                         <div class="member-info">
-                            <h3>Creative & Tech Collaborators</h3>
-                            <p class="member-role">Core Production Talents</p>
+                            <h3>Pawaris Iamraka</h3>
+                            <p class="member-role">Game Design</p>
                             <p class="member-bio">
-                                Our startup operates with a dedicated network of game designers, technical artists, and sound creators committed to bringing our debut game to life.
+                                Game and Interactive Media graduate from Bangkok University with foundational experience in Unity, particularly in level design using ProBuilder. Interested in designing spaces where players always know what to do and where to go — with good pacing and accessibility in mind. Still developing these skills, and looking to grow further as part of a professional game development team.
                             </p>
                             <div class="member-skills">
                                 <span>Game Design</span>
-                                <span>Technical Art</span>
-                                <span>Sound & VFX</span>
                                 <span>Level Design</span>
+                                <span>ProBuilder</span>
+                                <span>Pacing & Accessibility</span>
+                            </div>
+                            <div class="member-links">
+                                <a href="https://www.linkedin.com/in/%E0%B8%9B%E0%B8%A7%E0%B8%A3%E0%B8%B4%E0%B8%AA-%E0%B9%80%E0%B8%AD%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A1%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2-675826410/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 3: Kullanun Galantakapan -->
+                    <div class="team-card">
+                        <div class="member-avatar">
+                            <img src="kullanun.png" alt="Kullanun Galantakapan" class="avatar-img">
+                            <span class="role-badge">Core Team</span>
+                        </div>
+                        <div class="member-info">
+                            <h3>Kullanun Galantakapan</h3>
+                            <p class="member-role">3D Artist</p>
+                            <p class="member-bio">
+                                Graduated with a B.Sc. in Information Technology and Innovation (Major in Game & Interactive Media) from Bangkok University. Experienced in 3D modeling, texturing, and animation.
+                            </p>
+                            <div class="member-skills">
+                                <span>3D Modeling</span>
+                                <span>Texturing</span>
+                                <span>3D Animation</span>
+                                <span>Asset Creation</span>
                             </div>
                         </div>
                     </div>
@@ -396,6 +424,6 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=3.0"></script>
 </body>
 </html>

@@ -38,6 +38,33 @@
 
 ---
 
+## 📅 [2026-08-27] - Hotfix: แก้ไขปัญหา Browser Cache & ชี้แจง GitHub Actions Warning
+
+### 🔍 สาเหตุและวิธีแก้:
+1. **GitHub Actions Warning (`Node.js 20 is deprecated`):**
+   - เป็นการแจ้งเตือนภายในของ GitHub Actions Runner (เรื่องการอัปเกรด Node 20 -> 24) **ไม่มีผลกระทบต่อเว็บไซต์** และสถานะการ Build เป็น `Success` ปกติ
+2. **หน้าเว็บแสดงผลเพี้ยน (Unstyled HTML):**
+   - เกิดจาก Browser Cache จำไฟล์ `style.css` เก่า ทำให้โครงสร้าง HTML ใหม่ไม่พบ Class ใน CSS เดิม
+   - **การแก้ไข:** ทำ Cache Busting โดยเพิ่ม `style.css?v=2.0` และ `script.js?v=2.0` ใน `index.html` เพื่อบังคับให้เบราว์เซอร์ดาวน์โหลดไฟล์ตกแต่งเวอร์ชันล่าสุดทันที
+
+---
+
+## 📅 [2026-08-27] - Milestone 2: อัปเดตส่วน Meet the Team (3 สมาชิกหลัก)
+
+### 🛠️ รายละเอียดการเปลี่ยนแปลง:
+1. **ตัดกล่อง Placeholder ออก:** ลบการ์ด `Creative & Tech Collaborators` ออกตามคำขอ
+2. **จัด Layout การ์ดสมาชิก (2 คอลัมน์):**
+   - ฝั่งซ้าย: รูปภาพโปรไฟล์ (`รูปภาพ`)
+   - ฝั่งขวา: รายละเอียดประวัติ ทักษะ และลิงก์โซเชียล
+   - **นำปุ่มอีเมลออกจากทุกการ์ด** คงเหลือเฉพาะ LinkedIn และ GitHub
+3. **เพิ่มข้อมูลและรูปภาพสมาชิกทีมครบ 3 ท่าน:**
+   - **1. Kasidis Phumjumpa:** Founder & Lead Unity Developer (`1.jpg`)
+   - **2. Pawaris Iamraka:** Game Design (`pawaris.png`) พร้อมลิงก์ LinkedIn
+   - **3. Kullanun Galantakapan:** 3D Artist (`kullanun.png`)
+4. **อัปเกรด Cache Buster:** ปรับเป็น `v=3.0` เพื่อให้หน้าเว็บโหลด CSS/JS ล่าสุดทันที
+
+---
+
 ## 📌 แผนการดำเนินงานขั้นต่อไป (Next Steps):
 - [ ] เมื่อมีชื่อเกมทางการ / Key Visual / Teaser สามารถนำมาใส่แทนที่ Placeholder ในส่วน `Debut Project` ได้ทันที
 - [ ] หากมีสมาชิกทีมคนอื่นๆ เพิ่มเติม สามารถเพิ่มการ์ดในส่วน `Team Section` ได้ง่าย
