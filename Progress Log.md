@@ -81,6 +81,19 @@
 
 ---
 
+## 📅 [2026-08-27] - Milestone 4: ปรับแบรนด์สตูดิโอเป็น Solid Median & อัปเดตสโลแกนหลัก
+
+### 🛠️ รายละเอียดการเปลี่ยนแปลง:
+1. **เปลี่ยนชื่อสตูดิโอ (Rebranding):**
+   - เปลี่ยนชื่อจาก `KasidisStudio` เป็น **`Solid Median`** ทั้งใน Navigation Bar, Footer, Page Title, และ Social Meta Tags
+2. **เปลี่ยนสโลแกนหลัก (Hero Headline):**
+   - เปลี่ยนเป็น: **"We make games a great way to spend quality time and relax."** พร้อมไฮไลต์สี Gradient สไตล์ Modern
+3. **ปรับสถิติส่วนหัว (Hero Stats):**
+   - ตัดกล่อง `C# & OOP (Clean Architecture)` ออก คงไว้เฉพาะ `Unity 6 (Core Engine)` และ `1st IP (In Active Development)`
+4. **อัปเกรด Cache Buster:** ปรับเป็น `v=5.0` ใน `index.html`
+
+---
+
 ## 📌 แผนการดำเนินงานขั้นต่อไป (Next Steps):
 - [ ] เมื่อมีชื่อเกมทางการ / Key Visual / Teaser สามารถนำมาใส่แทนที่ Placeholder ในส่วน `Debut Project` ได้ทันที
 - [ ] หากมีสมาชิกทีมคนอื่นๆ เพิ่มเติม สามารถเพิ่มการ์ดในส่วน `Team Section` ได้ง่าย
