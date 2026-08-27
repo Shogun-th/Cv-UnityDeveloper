@@ -3,251 +3,399 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kasidis phumjumpa - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Indie Game Studio - Building the Next Generation of Games</title>
+    
+    <!-- Meta Tags for SEO & Social Previews -->
+    <meta name="description" content="An ambitious indie game development startup from Bangkok, Thailand. Crafting memorable, mechanics-driven gaming experiences with Unity & C#.">
+    <meta property="og:title" content="Indie Game Studio | Official Site">
+    <meta property="og:description" content="Independent Game Development Startup based in Bangkok, Thailand. Developing our inaugural debut title.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
+    <!-- Reading Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="progressBar"></div>
     </div>
-    <header class="hero-section">
-        <div id="particles-js"></div>
 
-        <img src="https://github.com/Shogun-th/Cv-UnityDeveloper/blob/main/1.jpg?raw=true" alt="KASIDIS PHUMJUMPA Profile Picture" class="profile-pic">
-        
-        <h1>Hi👋, I'm <span class="hero-name">Shogun</span></h1>        
-        
-        <a href="https://drive.google.com/file/d/1zlo0efg1sdEDs56hb82PIcNg1HVtIXQM/view?usp=sharing" class="cta-button" download>
-            <i class="fa-solid fa-download"></i> Download CV
-        </a>
+    <!-- Header Navigation -->
+    <header class="site-header" id="siteHeader">
+        <div class="nav-container">
+            <a href="#hero" class="brand-logo">
+                <span class="logo-icon"><i class="fa-solid fa-gamepad"></i></span>
+                <span class="logo-text">KASIDIS<span class="highlight">STUDIO</span></span>
+            </a>
 
-        <div class="tags">
-            <span class="tag">Game Programmer</span>
-            <span class="tag">Unity Developer</span>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#project" class="nav-link">Debut Project</a></li>
+                    <li><a href="#vision" class="nav-link">Vision</a></li>
+                    <li><a href="#team" class="nav-link">Team</a></li>
+                    <li><a href="#tech" class="nav-link">Tech Stack</a></li>
+                    <li><a href="#contact" class="nav-btn">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </header>
 
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            </ul>
-    </nav>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-glow"></div>
+            <div id="particles-js"></div>
 
-    <main class="content-wrapper">
-
-        <section id="about" class="card">
-            <h2><i class="fa-solid fa-diamond"></i> About Me</h2>
-            <p>
-                Hi 👋 My name is <span class="highlight-text">kasidis phumjumpa</span> a <span class="highlight-text">Passionate</span>
-                <span class="highlight-text">Unity Developer</span> <br> and <span class="highlight-text">Game Programmer</span> from <span class="highlight-text">Thailand</span>. 
-            </p>
-            <div class="about-tags">
-                <span class="about-tag">#Unity</span>
-                <span class="about-tag">#AI</span>
-                <span class="about-tag">#GameDev</span>
-            </div>
-        </section>
-
-        <section id="contact" class="card">
-            <h2><i class="fa-solid fa-diamond"></i> Contact</h2>
-            <ul>
-                <li>
-                    <strong><i class="fa-solid fa-phone"></i> Phone:</strong> 
-                    <a href="tel:+66970532935">+66 097-053-2935</a>
-                </li>
-                <li>
-                    <strong><i class="fa-solid fa-envelope"></i> Email:</strong> 
-                    <a href="mailto:kasidis.p15793@gmail.com">kasidis.p15793@gmail.com</a>
-                </li>
-                <li>
-                    <strong><i class="fa-solid fa-linkedin"></i> LinkedIn:</strong> 
-                    <a href="https://www.linkedin.com/in/kasidis-phumjumpa-a4aa9b396/" target="_blank">https://www.linkedin.com</a>
-                </li>
-            </ul>
-        </section>
-
-        <section id="education" class="card timeline-card full-width">
-            <h2><i class="fa-solid fa-diamond"></i> Education</h2>
-            <div class="timeline-container">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Bangkok University</h3>
-                        <p><strong>Degree:</strong> Bachelor's Degree in Information Technology and Innovation</p>
-                        <p><strong>Major:</strong> Game and Interactive Media</p>
-                        <span class="timeline-date">2022 - 2025</span>
-                    </div>
+            <div class="container hero-content">
+                <div class="startup-badge">
+                    <span class="pulse-dot"></span> INDEPENDENT GAME STARTUP &bull; BANGKOK, THAILAND
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3> Assumption College Rayong</h3>
-                        <p><strong>Degree:</strong> Arts - Language</p>
-                        <span class="timeline-date">2019 - 2021</span>
-                    </div>
+
+                <h1 class="hero-title">
+                    Crafting <span class="gradient-text">Immersive</span> & <span class="gradient-text-alt">Impactful</span> Game Worlds.
+                </h1>
+
+                <p class="hero-subtitle">
+                    We are a forward-thinking indie game development startup driven by passion, technical precision, and innovative gameplay design. Currently in active production of our debut title.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#project" class="btn btn-primary">
+                        <i class="fa-solid fa-fire"></i> Our Debut Project
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fa-solid fa-envelope"></i> Get In Touch
+                    </a>
                 </div>
-            </div>
-        </section>
-        
-        <section id="experience" class="card timeline-card full-width">
-            <h2><i class="fa-solid fa-diamond"></i> Experience</h2>
-            <div class="timeline-container">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>WolvEden Production Co., Ltd.</h3>
-                        <p><strong>Role:</strong> Unity Developer</p>
-                        <span class="timeline-date">19 May - 15 August 2025</span>
-                        <ul class="timeline-bullets">
-                            <li>Developed Tool Object Placer for Lv.Design</li>
-                            <li>Developed Environment and Buff/DuBuff </li>
-                            <li>Developed Spawn Monster and camp for Open World Game</li>
-                        </ul>
-                        
-                        <a href="https://drive.google.com/file/d/1IImnX0pxYIb9yRBRfLqD4tOgGCvyACru/view?usp=sharing" class="cert-btn" target="_blank">
-                             <i class="fa-solid fa-file-contract"></i> View Certificate
-                      </a>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">Unity 6</span>
+                        <span class="stat-label">Core Engine</span>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>BooBox – Senior Project</h3>
-                        <p><strong>Role:</strong>Project Manager - Game Programmer </p>
-                        <span class="timeline-date">January 2025 - Present</span>
-                        <ul class="timeline-bullets">
-                            <li>Developed an Android/ios game using Unity and C#</li>
-                            <li>Designed Idle RPG for players aged 18-35</li>
-                            <li>Manage Schedule Plan and Develop the system ON Cloud (Firebase) </li>
-                        </ul>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value">C# & OOP</span>
+                        <span class="stat-label">Clean Architecture</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value">1st IP</span>
+                        <span class="stat-label">In Active Development</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="card skills-section full-width">
-            <h2><i class="fa-solid fa-diamond"></i> Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="C# Logo" class="skill-icon">
-                    <div>
-                        <h3 class="skill-title c-sharp-color">C#</h3>
-                        <p>Strong in OOP, tools, systems programming</p>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/unity/unity-original.svg" alt="Unity Logo" class="skill-icon">
-                    <div>
-                        <h3 class="skill-title">Unity</h3>
-                        <p>Game Mechanics Development, Physics & Animation, UI/UX Design, AI for Games, 2D/3D Game Development, Optimization</p>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="GitHub Logo" class="skill-icon">
-                    <div>
-                        <h3 class="skill-title">Git & GitHub</h3>
-                        <p>Version control, collaborative workflows, and project management</p>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-solid fa-database skill-icon"></i>
-                    <div>
-                        <h3 class="skill-title"> SQL &Databases</h3>
-                        <p>Game data management, analytics, and structured queries</p>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <i class="fa-solid fa-map-signs skill-icon"></i>
-                     <div>
-                        <h3 class="skill-title">Level Design</h3>
-                        <p>Designing engaging levels with balance and pacing in mind</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="projects" class="card skills-section full-width">
-            <h2><i class="fa-solid fa-diamond"></i> Portfolio Projects</h2>
-            <div class="projects-grid">
-                
-                <div class="project-card">
-                    <img src="https://github.com/Shogun-th/Cv-UnityDeveloper/blob/main/png.jpg?raw=true" alt="Star Ship Project Image" class="project-image">
-                    <div class="project-info">
-                        <h3><i class="fa-solid fa-rocket"></i> Neon Uprising</h3>
-                        <p class="project-genre"><strong>Genre:</strong> Platformer</p>
-                        <p>It's a platformer game with a Cyberpunk theme, a training game for the team before doing the final project.</p>
-                        <a href="https://github.com/Shogun-th/GI383_XXX_IdeaGeneration" class="github-button" target="_blank">View github</a>
-                    </div>
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">ABOUT OUR STUDIO</span>
+                    <h2 class="section-title">Built by Game Creators, Driven by Passion</h2>
+                    <p class="section-desc">
+                        Founded by developers with a deep background in Game and Interactive Media, we aim to deliver meaningful interactive experiences with focus on responsive mechanics and polished game feel.
+                    </p>
                 </div>
 
-                <div class="project-card">
-                    <img src="https://github.com/Shogun-th/Cv-UnityDeveloper/blob/main/CronoSquare.png?raw=true" alt="CronoSquare Project Image" class="project-image">
-                    <div class="project-info">
-                        <h3><i class="fa-solid fa-square"></i> CronoSquare</h3>
-                        <p class="project-genre"><strong>Genre:</strong> Arcade</p>
-                        <p>It is a basic arcade game where players must eliminate enemies and increase their score with only 3 life points.</p>
-                        <a href="https://github.com/ekkarat74/CronoSquare" class="github-button" target="_blank">View github</a>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h3>Agile & Iterative</h3>
+                        <p>We believe in rapid prototyping, playtesting early, and iterating fast to find the core fun factor before scaling production.</p>
                     </div>
-                </div>
 
-                <div class="project-card">
-                    <img src="https://github.com/Shogun-th/Cv-UnityDeveloper/blob/main/Gravity_Girl_Surge.png?raw=true" alt="Gravity Girl Surge Project Image" class="project-image">
-                    <div class="project-info">
-                        <h3><i class="fa-solid fa-cube"></i> Gravity Girl Surge</h3>
-                        <p class="project-genre"><strong>Genre:</strong> Puzzle - Platformer</p>
-                        <p> Puzzle - Platformer  Gravity as the main subjects.</p>
-                        <a href="https://github.com/Ekkarat02-lab/Rapid_Game_Puzzle_PlatFormer" class="github-button" target="_blank">View github</a>
+                    <div class="about-card">
+                        <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h3>Robust Engineering</h3>
+                        <p>High-performance C# coding standards, modular tool development, and optimized systems built for smooth multiplatform deployment.</p>
                     </div>
-                </div>
 
-                <div class="project-card">
-                    <img src="https://github.com/Shogun-th/Cv-UnityDeveloper/blob/main/Grave_planet.png?raw=true" alt="Gravity Girl Surge Project Image" class="project-image">
-                    <div class="project-info">
-                        <h3><i class="fa-solid fa-cube"></i>  Grave Planet</h3>
-                        <p class="project-genre"><strong>Genre:</strong> Action - Adventure</p>
-                        <p> Action - Adventure and Design : Lost Civilzationas the main subjects.</p>
-                        <a href="https://github.com/Ekkarat02-lab/Rapid_Game_Action_Adventure" class="github-button" target="_blank">View github</a>
+                    <div class="about-card">
+                        <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3>Creative Independence</h3>
+                        <p>As an indie startup, we possess the creative agility to explore fresh mechanics, distinctive art styles, and bold gameplay narratives.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        </main>
-        <button onclick="topFunction()" id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+        <!-- Upcoming Debut Project Section -->
+        <section id="project" class="section project-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">DEBUT PROJECT SPOTLIGHT</span>
+                    <h2 class="section-title">What We Are Building</h2>
+                    <p class="section-desc">Our inaugural title is currently in active development — preparing for competition showcases and publisher pitches.</p>
+                </div>
 
-    <footer>
-        <p>© 2025 by kasidis phumjumpa. Created with passion.</p>
+                <div class="project-showcase-card">
+                    <div class="project-banner-placeholder">
+                        <div class="banner-overlay"></div>
+                        <div class="banner-content">
+                            <span class="status-badge"><i class="fa-solid fa-circle-notch fa-spin"></i> In Active Development</span>
+                            <h3 class="project-code-name">Project : [Inaugural Debut IP]</h3>
+                            <p class="project-pitch">
+                                An ambitious indie action title built with Unity, focusing on tight mechanical controls, atmospheric worldbuilding, and highly engaging game pacing.
+                            </p>
+                            
+                            <div class="spec-grid">
+                                <div class="spec-box">
+                                    <span class="spec-title"><i class="fa-solid fa-gear"></i> Engine</span>
+                                    <span class="spec-detail">Unity Engine (C#)</span>
+                                </div>
+                                <div class="spec-box">
+                                    <span class="spec-title"><i class="fa-solid fa-gamepad"></i> Target Platforms</span>
+                                    <span class="spec-detail">PC (Steam) / Consoles & Mobile</span>
+                                </div>
+                                <div class="spec-box">
+                                    <span class="spec-title"><i class="fa-solid fa-layer-group"></i> Current Stage</span>
+                                    <span class="spec-detail">Pre-Alpha Prototype / Pitch Ready</span>
+                                </div>
+                            </div>
+
+                            <div class="reveal-notice">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Official Title, Gameplay Teaser, and Media Showcase will be revealed upon competition submission & public debut.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision & Core Pillars Section -->
+        <section id="vision" class="section vision-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">OUR PHILOSOPHY</span>
+                    <h2 class="section-title">The Three Pillars of Our Development</h2>
+                </div>
+
+                <div class="pillars-grid">
+                    <div class="pillar-item">
+                        <div class="pillar-number">01</div>
+                        <h3>Gameplay First</h3>
+                        <p>Mechanics and controls must feel responsive and rewarding. If the core loop isn't fun, nothing else matters.</p>
+                    </div>
+
+                    <div class="pillar-item">
+                        <div class="pillar-number">02</div>
+                        <h3>Technical Precision</h3>
+                        <p>Scalable architecture, solid performance optimization, and custom developer tooling to ensure sustainable production.</p>
+                    </div>
+
+                    <div class="pillar-item">
+                        <div class="pillar-number">03</div>
+                        <h3>Player-Centric Polish</h3>
+                        <p>Every audio cue, visual VFX, and UI interaction is crafted with care to maximize immersion and enjoyment for players worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="section team-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">MEET THE TEAM</span>
+                    <h2 class="section-title">The Minds Behind The Games</h2>
+                    <p class="section-desc">Passionate game creators combining technical programming excellence with creative vision.</p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-card featured-member">
+                        <div class="member-avatar">
+                            <img src="1.jpg" alt="Kasidis Phumjumpa (Shogun)" class="avatar-img">
+                            <span class="role-badge">Founder</span>
+                        </div>
+                        <div class="member-info">
+                            <h3>Kasidis Phumjumpa</h3>
+                            <p class="member-role">Founder & Lead Unity Developer</p>
+                            <p class="member-bio">
+                                B.Sc. in Information Technology and Innovation (Major in Game & Interactive Media) from Bangkok University. Experienced in Unity architecture, C# systems programming, gameplay mechanics, and level design tooling.
+                            </p>
+                            <div class="member-skills">
+                                <span>Unity 3D/2D</span>
+                                <span>C# / OOP</span>
+                                <span>System Architecture</span>
+                                <span>Tools Dev</span>
+                            </div>
+                            <div class="member-links">
+                                <a href="mailto:kasidis.p15793@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                                <a href="https://www.linkedin.com/in/kasidis-phumjumpa-a4aa9b396/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/Shogun-th" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card collaboration-slot">
+                        <div class="collab-icon"><i class="fa-solid fa-users"></i></div>
+                        <div class="member-info">
+                            <h3>Creative & Tech Collaborators</h3>
+                            <p class="member-role">Core Production Talents</p>
+                            <p class="member-bio">
+                                Our startup operates with a dedicated network of game designers, technical artists, and sound creators committed to bringing our debut game to life.
+                            </p>
+                            <div class="member-skills">
+                                <span>Game Design</span>
+                                <span>Technical Art</span>
+                                <span>Sound & VFX</span>
+                                <span>Level Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech" class="section tech-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">ENGINEERING & TECH STACK</span>
+                    <h2 class="section-title">Powered by Modern Game Technologies</h2>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <i class="fa-brands fa-unity tech-icon"></i>
+                        <h4>Unity Engine</h4>
+                        <p>Universal Render Pipeline (URP), 2D/3D physics, and custom rendering shaders.</p>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="fa-solid fa-code tech-icon"></i>
+                        <h4>C# & Clean Code</h4>
+                        <p>Object-Oriented Programming, Design Patterns (State, Observer, Command), and modular systems.</p>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="fa-brands fa-git-alt tech-icon"></i>
+                        <h4>Git & Version Control</h4>
+                        <p>Structured branching workflows, Git LFS for game assets, and repository management.</p>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="fa-solid fa-database tech-icon"></i>
+                        <h4>Cloud & Data Systems</h4>
+                        <p>Firebase integration, structured game data architecture, and save/load state pipelines.</p>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="fa-solid fa-screwdriver-wrench tech-icon"></i>
+                        <h4>Custom Tooling</h4>
+                        <p>Custom Unity Editor tools for rapid level design, monster spawn managers, and attribute balancers.</p>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="fa-solid fa-mobile-screen-button tech-icon"></i>
+                        <h4>Multi-Platform Build</h4>
+                        <p>Cross-platform target optimization for PC (Windows/Steam), Android, iOS, and next-gen consoles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / Pitch Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-card-wrapper">
+                    <div class="contact-card">
+                        <div class="contact-header">
+                            <span class="section-tag">CONNECT WITH US</span>
+                            <h2>Let's Build Something Great Together</h2>
+                            <p>Open for competition evaluations, grant programs, incubator initiatives, and industry publisher inquiries.</p>
+                        </div>
+
+                        <div class="contact-details-grid">
+                            <a href="mailto:kasidis.p15793@gmail.com" class="contact-method-card">
+                                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <span class="method-label">Direct Email</span>
+                                    <span class="method-val">kasidis.p15793@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <a href="tel:+66970532935" class="contact-method-card">
+                                <div class="method-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <span class="method-label">Phone Call</span>
+                                    <span class="method-val">+66 097-053-2935</span>
+                                </div>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/kasidis-phumjumpa-a4aa9b396/" target="_blank" class="contact-method-card">
+                                <div class="method-icon"><i class="fa-brands fa-linkedin"></i></div>
+                                <div>
+                                    <span class="method-label">LinkedIn Profile</span>
+                                    <span class="method-val">linkedin.com/in/kasidis-phumjumpa</span>
+                                </div>
+                            </a>
+
+                            <div class="contact-method-card static-item">
+                                <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <span class="method-label">Location Base</span>
+                                    <span class="method-val">Bangkok, Thailand</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-footer-note">
+                            <i class="fa-solid fa-handshake"></i>
+                            <span>Preparing materials for upcoming game incubation programs and pitch events.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="logo-icon"><i class="fa-solid fa-gamepad"></i></span>
+                <span class="logo-text">KASIDIS <span class="highlight">STUDIO</span></span>
+                <p class="footer-tagline">Independent Game Development Startup &bull; Bangkok, Thailand</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#project">Project</a>
+                <a href="#vision">Vision</a>
+                <a href="#team">Team</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Indie Game Startup. All Rights Reserved. Built with passion & Unity.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Back to top button -->
+    <button class="back-to-top" id="scrollTopBtn" title="Back to top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
-    <script>
-        particlesJS("particles-js", {
-            "particles": {
-                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": "#ffffff" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.5, "random": false },
-                "size": { "value": 3, "random": true },
-                "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
-                "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
-                "modes": { "repulse": { "distance": 100, "duration": 0.4 }, "push": { "particles_nb": 4 } }
-            },
-            "retina_detect": true
-        });
-    </script>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>

@@ -1,37 +1,123 @@
-//--- ส่วนที่ 1: จัดการ Progress Bar (โค้ดเดิมของคุณ) ---//
-window.onscroll = function() {
-    updateScrollProgress();
-    scrollFunction(); // เรียกใช้ฟังก์ชันของปุ่ม Scroll to Top ด้วย
-};
+/**
+ * Indie Game Development Startup - Main Script
+ */
 
-function updateScrollProgress() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
-}
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. DOM Elements
+    const siteHeader = document.getElementById('siteHeader');
+    const progressBar = document.getElementById('progressBar');
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navLinks = document.querySelectorAll('.nav-link, .nav-btn');
 
+    // 2. Scroll Handling (Header, Progress Bar, Back to Top)
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        
+        // Update Scroll Progress Bar
+        if (scrollHeight > 0 && progressBar) {
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+            progressBar.style.width = scrollPercentage + '%';
+        }
 
-//--- ส่วนที่ 2: จัดการปุ่ม Scroll to Top (โค้ดใหม่) ---//
+        // Header Scrolled Glass Effect
+        if (siteHeader) {
+            if (scrollTop > 50) {
+                siteHeader.classList.add('scrolled');
+            } else {
+                siteHeader.classList.remove('scrolled');
+            }
+        }
 
-// 1. ดึงปุ่มมาเก็บในตัวแปร
-let mybutton = document.getElementById("scrollTopBtn");
+        // Back to Top Visibility
+        if (scrollTopBtn) {
+            if (scrollTop > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        }
+    });
 
-// 2. ฟังก์ชันสำหรับแสดง/ซ่อนปุ่ม
-function scrollFunction() {
-  // ถ้า scroll ลงมาเกิน 100px ให้แสดงปุ่ม
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    mybutton.style.display = "block";
-  } else {
-    // ถ้าน้อยกว่า 100px ให้ซ่อนปุ่ม
-    mybutton.style.display = "none";
-  }
-}
+    // 3. Back to Top Click
+    if (scrollTopBtn) {
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 
-// 3. ฟังก์ชันสำหรับเลื่อนกลับไปด้านบนสุด (แบบ Smooth)
-function topFunction() {
-  window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-  });
-}
+    // 4. Mobile Menu Toggle
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+            const icon = mobileToggle.querySelector('i');
+            if (icon) {
+                if (navMenu.classList.contains('open')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        });
+
+        // Close menu when link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                const icon = mobileToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    }
+
+    // 5. Initialize Ambient Particles (if library loaded)
+    if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 45, density: { enable: true, value_area: 900 } },
+                color: { value: ['#00d2ff', '#6366f1', '#ffffff'] },
+                shape: { type: 'circle' },
+                opacity: { value: 0.35, random: true },
+                size: { value: 2.5, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 140,
+                    color: '#00d2ff',
+                    opacity: 0.12,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1.2,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'grab' },
+                    onclick: { enable: false },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 160, line_linked: { opacity: 0.3 } }
+                }
+            },
+            retina_detect: true
+        });
+    }
+});
