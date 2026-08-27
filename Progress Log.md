@@ -65,6 +65,22 @@
 
 ---
 
+## 📅 [2026-08-27] - Milestone 3: ขยายขนาดรูปภาพทีมงาน & เพิ่มสมาชิกอีก 2 ท่าน (รวม 5 ท่าน)
+
+### 🛠️ รายละเอียดการเปลี่ยนแปลง:
+1. **ขยายสัดส่วนรูปภาพประจำตัว (Avatar Expansion):**
+   - ปรับ `.member-avatar` ให้มีความกว้าง 210px และยืดเต็มความสูงของการ์ด (`align-items: stretch; height: 100%; min-height: 220px;`)
+   - ทำให้ภาพแสดงผลเต็มพื้นที่กรอบฝั่งซ้ายตามที่ผู้ใช้มาร์กกรอบสีแดงไว้ เพิ่มความโดดเด่นและเต็มอิ่ม
+2. **เพิ่มสมาชิกทีมงานอีก 2 ท่าน (รวมเป็น 5 สมาชิกหลัก):**
+   - **1. Kasidis Phumjumpa (`1.jpg`):** Founder & Lead Unity Developer
+   - **2. Pawaris Iamraka (`pawaris.png`):** Game Design (LinkedIn)
+   - **3. Kullanun Galantakapan (`kullanun.png`):** 3D Artist
+   - **4. Apinat Fachaiyaphum (`apinat.jpg`):** 3D Modeler & Unity Developer (GitHub: `ApinatF`)
+   - **5. Satawat Chantanapot (`satawat.jpg`):** Concept Art & 2D Artist / Illustrator (Pixiv)
+3. **อัปเกรด Cache Buster:** ปรับเป็น `v=4.0` ใน `index.html`
+
+---
+
 ## 📌 แผนการดำเนินงานขั้นต่อไป (Next Steps):
 - [ ] เมื่อมีชื่อเกมทางการ / Key Visual / Teaser สามารถนำมาใส่แทนที่ Placeholder ในส่วน `Debut Project` ได้ทันที
 - [ ] หากมีสมาชิกทีมคนอื่นๆ เพิ่มเติม สามารถเพิ่มการ์ดในส่วน `Team Section` ได้ง่าย

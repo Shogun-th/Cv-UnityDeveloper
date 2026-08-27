@@ -675,11 +675,11 @@ img {
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--bg-card-border);
     border-radius: var(--radius-lg);
-    padding: 36px;
+    padding: 32px;
     transition: var(--transition-normal);
     display: flex;
     gap: 32px;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .team-card:hover {
@@ -691,30 +691,43 @@ img {
 .member-avatar {
     position: relative;
     flex-shrink: 0;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
 }
 
 .avatar-img {
-    width: 140px;
-    height: 140px;
-    border-radius: var(--radius-lg);
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    border-radius: var(--radius-md);
     object-fit: cover;
+    object-position: center top;
     border: 2px solid var(--primary-accent);
     box-shadow: 0 0 20px var(--primary-glow);
+    transition: var(--transition-normal);
+}
+
+.team-card:hover .avatar-img {
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.6);
+    border-color: #fff;
 }
 
 .role-badge {
     position: absolute;
-    bottom: -8px;
+    bottom: 12px;
     left: 50%;
     transform: translateX(-50%);
     background: var(--primary-accent);
     color: #060911;
     font-size: 0.75rem;
     font-weight: 700;
-    padding: 2px 10px;
+    padding: 4px 12px;
     border-radius: var(--radius-full);
     text-transform: uppercase;
     white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    z-index: 2;
 }
 
 .member-info {
@@ -1053,6 +1066,12 @@ img {
         text-align: center;
         align-items: center;
         padding: 30px 20px;
+    }
+    .member-avatar {
+        width: 100%;
+        max-width: 220px;
+        height: 260px;
+        margin-bottom: 20px;
     }
     .member-links {
         justify-content: center;
