@@ -94,6 +94,20 @@
 
 ---
 
+## 📅 [2026-08-27] - Milestone 5: ปรับปรุงคำอธิบายและข้อมูลเชิงลึกของโปรเจกต์เกมแรก (Debut IP)
+
+### 🛠️ รายละเอียดการเปลี่ยนแปลง:
+1. **ขัดเกลาคำอธิบายเกม (Pitch Description):**
+   - ข้อความใหม่: *"An ambitious **single-player indie action title** built with Unity, immersing players in a **modern, dark atmospheric world**. Crafted with precise mechanical controls, rich worldbuilding, and immersive pacing designed for high-quality, engaging play sessions."*
+2. **จัดหมวดหมู่ Spec Box ให้ครบถ้วนและชัดเจน:**
+   - **Engine:** Unity Engine (C#)
+   - **Mode & Genre:** Single-Player Action
+   - **Themes & Mood:** Modern & Dark Atmosphere
+   - **Target Platforms:** PC (Steam) / Multi-Platform
+3. **อัปเกรด Cache Buster:** ปรับเป็น `v=6.0` ใน `index.html`
+
+---
+
 ## 📌 แผนการดำเนินงานขั้นต่อไป (Next Steps):
 - [ ] เมื่อมีชื่อเกมทางการ / Key Visual / Teaser สามารถนำมาใส่แทนที่ Placeholder ในส่วน `Debut Project` ได้ทันที
 - [ ] หากมีสมาชิกทีมคนอื่นๆ เพิ่มเติม สามารถเพิ่มการ์ดในส่วน `Team Section` ได้ง่าย
